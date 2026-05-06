@@ -1,0 +1,127 @@
+# Variable Declaration
+
+Rules for variable declaration in Go:
+    Variable names must start with a letter.
+    Variable names are case-sensitive.
+    Go uses static typing.
+    Variables can be declared using:
+        var keyword
+        shorthand operator :=
+
+Examples:
+    var age int = 100
+    name := "Someone"
+
+--------------------------------------------------
+
+# Data Types
+
+Basic Data Types in Go:
+
+    int         -> Integer values
+    float64     -> Decimal values
+    string      -> Text values
+    bool        -> true or false
+
+Examples:
+    var age int = 100
+    var height float64 = 6.7
+    var name string = "Someone"
+
+--------------------------------------------------
+
+# Arithmetic Operators
+
++   Addition
+-   Subtraction
+*   Multiplication
+/   Division
+%   Modulus
+
+Example:
+    x := 10
+    y := 5
+
+--------------------------------------------------
+
+# Comparison Operators
+
+==  Equal
+!=  Not Equal
+>   Greater Than
+<   Less Than
+>=  Greater Than or Equal
+<=  Less Than or Equal
+
+--------------------------------------------------
+
+# Logical Operators
+
+&&  AND
+||  OR
+!   NOT
+
+--------------------------------------------------
+
+# Bitwise Operators
+
+&   AND
+|   OR
+^   XOR
+<<  Left Shift
+>>  Right Shift
+
+--------------------------------------------------
+
+# Input / Output
+
+fmt.Println() -> Print output with newline
+fmt.Print()   -> Print output
+fmt.Scanln()  -> Take user input
+
+Example:
+    var name string
+    fmt.Scanln(&name)
+
+--------------------------------------------------
+
+# Functions
+
+Functions are reusable blocks of code.
+
+Syntax:
+
+func functionName(parameters) returnType {
+    // code
+}
+
+Example:
+
+func add(num1 int, num2 int) int {
+    return num1 + num2
+}
+
+--------------------------------------------------
+
+# Comments
+
+Single-line comment:
+    // This is a comment
+
+Multi-line comment:
+    /*
+        This is a multiline comment
+    */
+
+--------------------------------------------------
+
+# Documentation Comments
+
+Go uses comments above functions for documentation.
+
+Example:
+
+// add takes two integers and returns their sum.
+func add(num1 int, num2 int) int {
+    return num1 + num2
+}
