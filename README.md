@@ -17,12 +17,12 @@ The goal of this repository is:
 
 ## [ ] 1. Basics of Go
 
-* [ ] Installing Go
-* [ ] Go Workspace
-* [ ] Variables and Constants
-* [ ] Data Types
-* [ ] Operators
-* [ ] Input / Output
+* [✅] Installing Go
+* [✅] Go Workspace
+* [✅] Variables and Constants
+* [✅] Data Types
+* [✅] Operators
+* [✅] Input / Output
 * [ ] Type Conversion
 * [ ] Formatting Output
 
@@ -30,7 +30,7 @@ The goal of this repository is:
 
 ## [ ] 2. Control Flow
 
-* [ ] `if`, `else`, `switch`
+* [✅] `if`, `else`, `switch`
 * [ ] `for` loops
 * [ ] Nested loops
 * [ ] `break`, `continue`
