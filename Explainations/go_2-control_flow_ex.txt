@@ -1,0 +1,206 @@
+# Control Flow in Go
+
+Control flow allows programs to make decisions.
+
+--------------------------------------------------
+
+# if Statement
+
+Syntax:
+
+if condition {
+    // code
+}
+
+Example:
+
+age := 18
+
+if age >= 18 {
+    fmt.Println("Adult")
+}
+
+--------------------------------------------------
+
+# if else Statement
+
+Syntax:
+
+if condition {
+    // code
+} else {
+    // code
+}
+
+Example:
+
+number := 10
+
+if number % 2 == 0 {
+    fmt.Println("Even")
+} else {
+    fmt.Println("Odd")
+}
+
+--------------------------------------------------
+
+# else if Statement
+
+Used when multiple conditions are checked.
+
+Example:
+
+marks := 75
+
+if marks >= 90 {
+    fmt.Println("Grade A")
+} else if marks >= 50 {
+    fmt.Println("Pass")
+} else {
+    fmt.Println("Fail")
+}
+
+--------------------------------------------------
+
+# Nested if
+
+An if statement inside another if statement.
+
+Example:
+
+age := 18
+gender := "male"
+
+if age >= 18 {
+
+    if gender == "male" {
+        fmt.Println("Adult Male")
+    }
+}
+
+--------------------------------------------------
+
+# Short Statement in if
+
+Go allows variable declaration inside if.
+
+Syntax:
+
+if variable := value; condition {
+    // code
+}
+
+Example:
+
+if score := 80; score >= 50 {
+    fmt.Println("Pass")
+}
+
+--------------------------------------------------
+
+# Logical Operators in Conditions
+
+&&  AND
+||  OR
+!   NOT
+
+Example:
+
+if isStudent && hasID {
+    fmt.Println("Allowed")
+}
+
+--------------------------------------------------
+
+# switch Statement
+
+Used instead of multiple if-else blocks.
+
+Syntax:
+
+switch variable {
+
+case value1:
+    // code
+
+case value2:
+    // code
+
+default:
+    // code
+}
+
+Example:
+
+day := 1
+
+switch day {
+
+case 1:
+    fmt.Println("Monday")
+
+default:
+    fmt.Println("Unknown")
+}
+
+--------------------------------------------------
+
+# switch Without Expression
+
+Go switch can work like if-else.
+
+Example:
+
+marks := 75
+
+switch {
+
+case marks >= 90:
+    fmt.Println("A")
+
+case marks >= 50:
+    fmt.Println("Pass")
+}
+
+--------------------------------------------------
+
+# Important Notes
+
+1. Go does NOT require parentheses around conditions.
+
+Correct:
+    if age > 18 {
+
+Incorrect:
+    if (age > 18) {
+
+2. Curly braces {} are mandatory.
+
+3. switch automatically breaks in Go.
+No need to write break manually.
+
+--------------------------------------------------
+
+# Python vs Go
+
+Python:
+    if age > 18:
+
+Go:
+    if age > 18 {
+
+--------------------------------------------------
+
+Python:
+    elif
+
+Go:
+    else if
+
+--------------------------------------------------
+
+Python:
+    match-case
+
+Go:
+    switch
