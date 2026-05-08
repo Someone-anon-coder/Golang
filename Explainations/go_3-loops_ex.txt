@@ -1,0 +1,201 @@
+# Loops in Go
+
+Loops are used to repeat code multiple times.
+
+Go has only one looping keyword:
+    for
+
+--------------------------------------------------
+
+# Basic for Loop
+
+Syntax:
+
+for initialization; condition; update {
+    // code
+}
+
+Example:
+
+for i := 1; i <= 5; i++ {
+    fmt.Println(i)
+}
+
+--------------------------------------------------
+
+# While-style Loop
+
+Go does not have a while keyword.
+
+A for loop can act like while.
+
+Example:
+
+number := 1
+
+for number <= 5 {
+    fmt.Println(number)
+    number++
+}
+
+--------------------------------------------------
+
+# Infinite Loop
+
+Syntax:
+
+for {
+    // infinite loop
+}
+
+Example:
+
+for {
+    fmt.Println("Running forever")
+}
+
+--------------------------------------------------
+
+# break Statement
+
+break stops the loop immediately.
+
+Example:
+
+for i := 1; i <= 10; i++ {
+
+    if i == 5 {
+        break
+    }
+
+    fmt.Println(i)
+}
+
+--------------------------------------------------
+
+# continue Statement
+
+continue skips the current iteration.
+
+Example:
+
+for i := 1; i <= 5; i++ {
+
+    if i == 3 {
+        continue
+    }
+
+    fmt.Println(i)
+}
+
+--------------------------------------------------
+
+# Nested Loops
+
+A loop inside another loop.
+
+Example:
+
+for i := 1; i <= 3; i++ {
+
+    for j := 1; j <= 3; j++ {
+        fmt.Println(i, j)
+    }
+}
+
+--------------------------------------------------
+
+# range Keyword
+
+range is used to iterate over:
+    slices
+    arrays
+    strings
+    maps
+
+--------------------------------------------------
+
+# range with Slice
+
+numbers := []int{10, 20, 30}
+
+for index, value := range numbers {
+    fmt.Println(index, value)
+}
+
+--------------------------------------------------
+
+# range with String
+
+for index, char := range "GO" {
+    fmt.Printf("%d %c\n", index, char)
+}
+
+--------------------------------------------------
+
+# range with Map
+
+students := map[string]int{
+    "Alice": 90,
+}
+
+for key, value := range students {
+    fmt.Println(key, value)
+}
+
+--------------------------------------------------
+
+# Pattern Printing
+
+Nested loops are commonly used for patterns.
+
+Example:
+
+*
+* *
+* * *
+* * * *
+
+--------------------------------------------------
+
+# Important Notes
+
+1. Go only has for loops.
+No while or do-while loops.
+
+2. Curly braces {} are mandatory.
+
+3. ++ and -- are statements in Go.
+They cannot be used inside expressions.
+
+Correct:
+    i++
+
+Incorrect:
+    x = i++
+
+--------------------------------------------------
+
+# Python vs Go
+
+Python:
+    for i in range(5):
+
+Go:
+    for i := 0; i < 5; i++ {
+
+--------------------------------------------------
+
+Python:
+    while condition:
+
+Go:
+    for condition {
+
+--------------------------------------------------
+
+Python:
+    for item in list:
+
+Go:
+    for _, item := range list {

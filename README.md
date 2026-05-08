@@ -31,9 +31,9 @@ The goal of this repository is:
 ## [ ] 2. Control Flow
 
 * [✅] `if`, `else`, `switch`
-* [ ] `for` loops
-* [ ] Nested loops
-* [ ] `break`, `continue`
+* [✅] `for` loops
+* [✅] Nested loops
+* [✅] `break`, `continue`
 * [ ] Labels in Go
 
 ---
