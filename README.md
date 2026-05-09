@@ -38,15 +38,15 @@ The goal of this repository is:
 
 ---
 
-## [ ] 3. Functions
+## [✅] 3. Functions
 
-* [ ] Function Declaration
-* [ ] Multiple Return Values
-* [ ] Named Return Values
-* [ ] Variadic Functions
-* [ ] Anonymous Functions
-* [ ] Closures
-* [ ] Recursion
+* [✅] Function Declaration
+* [✅] Multiple Return Values
+* [✅] Named Return Values
+* [✅] Variadic Functions
+* [✅] Anonymous Functions
+* [✅] Closures
+* [✅] Recursion
 
 ---
 
