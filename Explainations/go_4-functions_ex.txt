@@ -1,0 +1,208 @@
+# Functions in Go
+
+Functions are reusable blocks of code.
+
+--------------------------------------------------
+
+# Function Declaration
+
+Syntax:
+
+func functionName(parameters) returnType {
+    // code
+}
+
+Example:
+
+func greet() {
+    fmt.Println("Hello")
+}
+
+--------------------------------------------------
+
+# Function Parameters
+
+Functions can accept parameters.
+
+Example:
+
+func greetPerson(name string, age int) {
+    fmt.Println(name, age)
+}
+
+--------------------------------------------------
+
+# Return Values
+
+Functions can return values.
+
+Example:
+
+func add(a int, b int) int {
+    return a + b
+}
+
+--------------------------------------------------
+
+# Multiple Return Values
+
+Go supports returning multiple values.
+
+Example:
+
+func divide(a float64, b float64) (float64, string) {
+
+    if b == 0 {
+        return 0, "Cannot divide by zero"
+    }
+
+    return a / b, "Success"
+}
+
+--------------------------------------------------
+
+# Variadic Functions
+
+Variadic functions accept multiple arguments.
+
+Syntax:
+
+func functionName(values ...type)
+
+Example:
+
+func total(nums ...int) int {
+
+    sum := 0
+
+    for _, num := range nums {
+        sum += num
+    }
+
+    return sum
+}
+
+--------------------------------------------------
+
+# Anonymous Functions
+
+Functions without names.
+
+Example:
+
+func() {
+    fmt.Println("Anonymous")
+}()
+
+--------------------------------------------------
+
+# Functions as Variables
+
+Functions can be stored in variables.
+
+Example:
+
+multiply := func(a int, b int) int {
+    return a * b
+}
+
+--------------------------------------------------
+
+# Closures
+
+Closures remember variables from outside.
+
+Example:
+
+func counter() func() int {
+
+    count := 0
+
+    return func() int {
+        count++
+        return count
+    }
+}
+
+--------------------------------------------------
+
+# Recursion
+
+A recursive function calls itself.
+
+Example:
+
+func factorial(n int) int {
+
+    if n == 0 {
+        return 1
+    }
+
+    return n * factorial(n-1)
+}
+
+--------------------------------------------------
+
+# Important Notes
+
+1. Go does NOT support default parameters directly.
+
+Python:
+    def greet(name="Someone"):
+
+Go:
+    Use conditional logic manually.
+
+--------------------------------------------------
+
+2. Multiple return values are very common in Go.
+
+Especially for:
+    result, error
+
+Example:
+    value, err := someFunction()
+
+--------------------------------------------------
+
+3. Variadic arguments become slices internally.
+
+Example:
+    nums ...int
+
+acts like:
+    []int
+
+--------------------------------------------------
+
+# Python vs Go
+
+Python:
+    def greet():
+
+Go:
+    func greet() {
+
+--------------------------------------------------
+
+Python:
+    *args
+
+Go:
+    ...int
+
+--------------------------------------------------
+
+Python:
+    **kwargs
+
+Go:
+    Use structs or maps instead
+
+--------------------------------------------------
+
+Python:
+    lambda
+
+Go:
+    anonymous functions
