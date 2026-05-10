@@ -24,7 +24,7 @@ The goal of this repository is:
 * [✅] Operators
 * [✅] Input / Output
 * [ ] Type Conversion
-* [ ] Formatting Output
+* [✅] Formatting Output
 
 ---
 
@@ -50,15 +50,15 @@ The goal of this repository is:
 
 ---
 
-## [ ] 4. Arrays, Slices & Maps
+## [✅] 4. Arrays, Slices & Maps
 
-* [ ] Arrays
-* [ ] Slices
-* [ ] Slice Operations
-* [ ] Maps
-* [ ] Iteration using `range`
-* [ ] Copying Slices
-* [ ] Multi-dimensional Slices
+* [✅] Arrays
+* [✅] Slices
+* [✅] Slice Operations
+* [✅] Maps
+* [✅] Iteration using `range`
+* [✅] Copying Slices
+* [✅] Multi-dimensional Slices
 
 ---
 
