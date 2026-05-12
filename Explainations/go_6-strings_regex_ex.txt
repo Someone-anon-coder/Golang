@@ -1,0 +1,221 @@
+# Strings, Runes & Regular Expressions in Go
+
+Strings are sequences of characters.
+
+--------------------------------------------------
+
+# String Declaration
+
+Example:
+
+name := "Golang"
+
+--------------------------------------------------
+
+# String Length
+
+Use len()
+
+Example:
+
+len(name)
+
+--------------------------------------------------
+
+# String Concatenation
+
+Use +
+
+Example:
+
+fullName := first + " " + last
+
+--------------------------------------------------
+
+# String Formatting
+
+fmt.Printf() formats strings.
+
+Common format specifiers:
+
+%s  string
+%d  integer
+%f  float
+%v  any value
+
+Example:
+
+fmt.Printf("%s is %d years old", name, age)
+
+--------------------------------------------------
+
+# Escape Characters
+
+\n  New Line
+\t  Tab
+\"  Double Quote
+
+--------------------------------------------------
+
+# strings Package
+
+Useful functions:
+
+strings.ToUpper()
+strings.ToLower()
+strings.TrimSpace()
+strings.Contains()
+strings.ReplaceAll()
+strings.Count()
+
+--------------------------------------------------
+
+# Split Strings
+
+Example:
+
+strings.Split(text, ",")
+
+--------------------------------------------------
+
+# Join Strings
+
+Example:
+
+strings.Join(slice, "-")
+
+--------------------------------------------------
+
+# String Slicing
+
+Example:
+
+word := "GOLANG"
+
+word[0:3]
+
+--------------------------------------------------
+
+# Rune
+
+Rune represents Unicode code points.
+
+Type:
+    rune = int32
+
+--------------------------------------------------
+
+# Unicode Strings
+
+Go strings are UTF-8 encoded.
+
+Example:
+
+message := "Go语言"
+
+--------------------------------------------------
+
+# Rune Conversion
+
+Convert string to rune slice.
+
+Example:
+
+runes := []rune(message)
+
+--------------------------------------------------
+
+# strings.Builder
+
+Efficient string building.
+
+Example:
+
+var builder strings.Builder
+
+builder.WriteString("Hello")
+
+--------------------------------------------------
+
+# Regular Expressions
+
+Package:
+    regexp
+
+--------------------------------------------------
+
+# Match Regex
+
+Example:
+
+regexp.MatchString(pattern, text)
+
+--------------------------------------------------
+
+# Compile Regex
+
+Example:
+
+re := regexp.MustCompile(`\d+`)
+
+--------------------------------------------------
+
+# Find Regex Matches
+
+Example:
+
+re.FindAllString(text, -1)
+
+--------------------------------------------------
+
+# Replace Regex Matches
+
+Example:
+
+re.ReplaceAllString(text, "X")
+
+--------------------------------------------------
+
+# Important Notes
+
+1. Strings are immutable in Go.
+
+2. Indexing strings returns bytes, not characters.
+
+3. Use rune for Unicode-safe operations.
+
+4. strings.Builder is efficient for large concatenations.
+
+--------------------------------------------------
+
+# Python vs Go
+
+Python:
+    len(text)
+
+Go:
+    len(text)
+
+--------------------------------------------------
+
+Python:
+    text.upper()
+
+Go:
+    strings.ToUpper(text)
+
+--------------------------------------------------
+
+Python:
+    re.findall()
+
+Go:
+    re.FindAllString()
+
+--------------------------------------------------
+
+Python:
+    f"{name}"
+
+Go:
+    fmt.Printf("%s", name)
