@@ -62,14 +62,14 @@ The goal of this repository is:
 
 ---
 
-## [ ] 5. Strings
+## [✅] 5. Strings
 
-* [ ] String Operations
-* [ ] String Formatting
-* [ ] Rune Handling
-* [ ] Unicode Support
-* [ ] String Builder
-* [ ] Regular Expressions
+* [✅] String Operations
+* [✅] String Formatting
+* [✅] Rune Handling
+* [✅] Unicode Support
+* [✅] String Builder
+* [✅] Regular Expressions
 
 ---
 
