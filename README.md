@@ -73,12 +73,12 @@ The goal of this repository is:
 
 ---
 
-## [ ] 6. Pointers
+## [✅] 6. Pointers
 
-* [ ] Pointer Basics
-* [ ] Dereferencing
-* [ ] Passing by Reference
-* [ ] Memory Concepts
+* [✅] Pointer Basics
+* [✅] Dereferencing
+* [✅] Passing by Reference
+* [✅] Memory Concepts
 
 ---
 
