@@ -1,0 +1,178 @@
+# Pointers in Go
+
+Pointers store memory addresses.
+
+--------------------------------------------------
+
+# Pointer Declaration
+
+Syntax:
+
+var ptr *int
+
+Meaning:
+    ptr can store address of an integer.
+
+--------------------------------------------------
+
+# Address Operator (&)
+
+& gives memory address.
+
+Example:
+
+number := 10
+
+&number
+
+--------------------------------------------------
+
+# Pointer Assignment
+
+Example:
+
+ptr := &number
+
+--------------------------------------------------
+
+# Dereferencing (*)
+
+* accesses value stored at address.
+
+Example:
+
+fmt.Println(*ptr)
+
+--------------------------------------------------
+
+# Modifying Value via Pointer
+
+Example:
+
+*ptr = 50
+
+--------------------------------------------------
+
+# Passing Pointers to Functions
+
+Pointers allow modifying original values.
+
+Example:
+
+func update(num *int) {
+    *num = 100
+}
+
+--------------------------------------------------
+
+# Nil Pointers
+
+Uninitialized pointers are nil.
+
+Example:
+
+var ptr *int
+
+if ptr == nil {
+    fmt.Println("Nil")
+}
+
+--------------------------------------------------
+
+# new() Function
+
+Allocates memory and returns pointer.
+
+Example:
+
+data := new(int)
+
+--------------------------------------------------
+
+# Struct Pointers
+
+Pointers commonly used with structs.
+
+Example:
+
+type Person struct {
+    name string
+}
+
+--------------------------------------------------
+
+# Access Struct Pointer Fields
+
+Go automatically dereferences struct pointers.
+
+Example:
+
+personPtr.name
+
+Instead of:
+    (*personPtr).name
+
+--------------------------------------------------
+
+# Pointer to Pointer
+
+Pointers can store addresses of pointers.
+
+Example:
+
+p1 := &x
+p2 := &p1
+
+--------------------------------------------------
+
+# Important Notes
+
+1. Go has no pointer arithmetic.
+
+Unlike C:
+    ptr++
+
+is NOT allowed.
+
+--------------------------------------------------
+
+2. Slices, maps, and channels internally behave like references.
+
+--------------------------------------------------
+
+3. Passing large structs by pointer improves performance.
+
+--------------------------------------------------
+
+4. Nil pointer dereference causes panic.
+
+Example:
+    *ptr
+
+when ptr == nil
+
+--------------------------------------------------
+
+# Python vs Go
+
+Python:
+    Variables are references automatically.
+
+Go:
+    Explicit pointers using *
+
+--------------------------------------------------
+
+Python:
+    No direct memory access.
+
+Go:
+    Access memory addresses using &
+
+--------------------------------------------------
+
+Python:
+    Objects passed by reference-like behavior.
+
+Go:
+    Explicit pointer passing.
