@@ -82,13 +82,13 @@ The goal of this repository is:
 
 ---
 
-## [ ] 7. Structs & Methods
+## [✅] 7. Structs & Methods
 
-* [ ] Structs
-* [ ] Embedded Structs
-* [ ] Methods
-* [ ] Method Receivers
-* [ ] Composition
+* [✅] Structs
+* [✅] Embedded Structs
+* [✅] Methods
+* [✅] Method Receivers
+* [✅] Composition
 
 ---
 
