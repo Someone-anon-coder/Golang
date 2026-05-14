@@ -1,0 +1,197 @@
+# Structs & Methods in Go
+
+Structs group related data together.
+
+--------------------------------------------------
+
+# Struct Declaration
+
+Syntax:
+
+type StructName struct {
+    field type
+}
+
+Example:
+
+type Person struct {
+    name string
+    age int
+}
+
+--------------------------------------------------
+
+# Creating Structs
+
+Example:
+
+person := Person{
+    name: "Someone",
+    age: 100,
+}
+
+--------------------------------------------------
+
+# Accessing Fields
+
+Use dot notation.
+
+Example:
+
+person.name
+person.age
+
+--------------------------------------------------
+
+# Modifying Fields
+
+Example:
+
+person.age = 101
+
+--------------------------------------------------
+
+# Methods
+
+Methods are functions attached to structs.
+
+Syntax:
+
+func (receiver Type) methodName() {
+    // code
+}
+
+--------------------------------------------------
+
+# Value Receiver
+
+Receives copy of struct.
+
+Example:
+
+func (p Person) greet() {
+    fmt.Println(p.name)
+}
+
+Changes do NOT affect original struct.
+
+--------------------------------------------------
+
+# Pointer Receiver
+
+Receives pointer to struct.
+
+Example:
+
+func (p *Person) updateAge(age int) {
+    p.age = age
+}
+
+Changes affect original struct.
+
+--------------------------------------------------
+
+# Embedded Structs
+
+Structs can contain other structs.
+
+Example:
+
+type Employee struct {
+    Person
+    Address
+}
+
+--------------------------------------------------
+
+# Composition
+
+Go prefers composition over inheritance.
+
+Instead of:
+    IS-A relationship
+
+Go uses:
+    HAS-A relationship
+
+--------------------------------------------------
+
+# Anonymous Structs
+
+Structs without names.
+
+Example:
+
+car := struct {
+    brand string
+}{
+    brand: "Tesla",
+}
+
+--------------------------------------------------
+
+# Struct Comparison
+
+Structs can be compared if all fields are comparable.
+
+Example:
+
+person1 == person2
+
+--------------------------------------------------
+
+# Struct Pointers
+
+Pointers can reference structs.
+
+Example:
+
+ptr := &person
+
+--------------------------------------------------
+
+# Important Notes
+
+1. Go does NOT have classes.
+
+2. Methods belong to types.
+
+3. No inheritance in Go.
+
+4. Composition is preferred over inheritance.
+
+5. Pointer receivers avoid copying large structs.
+
+--------------------------------------------------
+
+# Python vs Go
+
+Python:
+    class Person:
+
+Go:
+    type Person struct {
+
+--------------------------------------------------
+
+Python:
+    self
+
+Go:
+    receiver
+
+--------------------------------------------------
+
+Python:
+    inheritance
+
+Go:
+    composition using embedded structs
+
+--------------------------------------------------
+
+Python:
+    __init__
+
+Go:
+    struct initialization
